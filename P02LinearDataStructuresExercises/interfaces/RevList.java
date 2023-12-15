@@ -1,4 +1,4 @@
-package P01LinearDataStructuresExercises.interfaces;
+package P02LinearDataStructuresExercises.interfaces;
 
 public interface RevList<E> extends Iterable<E> {
 

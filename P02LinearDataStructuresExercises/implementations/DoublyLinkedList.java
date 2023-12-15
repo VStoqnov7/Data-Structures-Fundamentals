@@ -1,6 +1,6 @@
-package P01LinearDataStructuresExercises.implementations;
+package P02LinearDataStructuresExercises.implementations;
 
-import P01LinearDataStructuresExercises.interfaces.LinkedList;
+import P02LinearDataStructuresExercises.interfaces.LinkedList;
 
 import java.util.Iterator;
 

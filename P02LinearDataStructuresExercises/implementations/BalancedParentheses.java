@@ -1,6 +1,6 @@
-package P01LinearDataStructuresExercises.implementations;
+package P02LinearDataStructuresExercises.implementations;
 
-import P01LinearDataStructuresExercises.interfaces.Solvable;
+import P02LinearDataStructuresExercises.interfaces.Solvable;
 
 import java.util.Stack;
 

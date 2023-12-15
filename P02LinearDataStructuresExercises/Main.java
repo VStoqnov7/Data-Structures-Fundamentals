@@ -1,6 +1,6 @@
-package P01LinearDataStructuresExercises;
+package P02LinearDataStructuresExercises;
 
-import P01LinearDataStructuresExercises.implementations.ReversedList;
+import P02LinearDataStructuresExercises.implementations.ReversedList;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package P01LinearDataStructuresExercises.implementations;
+package P02LinearDataStructuresExercises.implementations;
 
-import P01LinearDataStructuresExercises.interfaces.Deque;
+import P02LinearDataStructuresExercises.interfaces.Deque;
 
 import java.util.Iterator;
 

@@ -1,6 +1,6 @@
-package P01LinearDataStructuresExercises.implementations;
+package P02LinearDataStructuresExercises.implementations;
 
-import P01LinearDataStructuresExercises.interfaces.RevList;
+import P02LinearDataStructuresExercises.interfaces.RevList;
 
 import java.util.Arrays;
 import java.util.Iterator;

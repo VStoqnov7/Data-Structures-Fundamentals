@@ -1,4 +1,4 @@
-package P01LinearDataStructuresExercises.interfaces;
+package P02LinearDataStructuresExercises.interfaces;
 
 public interface LinkedList<E> extends Iterable<E> {
     void addFirst(E element);

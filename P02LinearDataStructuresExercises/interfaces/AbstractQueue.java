@@ -1,4 +1,4 @@
-package P01LinearDataStructuresExercises.interfaces;
+package P02LinearDataStructuresExercises.interfaces;
 
 public interface AbstractQueue<E> extends Iterable<E> {
     void offer(E element);

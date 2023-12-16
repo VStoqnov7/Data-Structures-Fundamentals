@@ -1,9 +1,12 @@
 package P03TreesRepresentationAndTraversal_BFS_DFS;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
 
-public class DemoBFSTree {
-    static class Cell{
+public class DemoDFSTree {
+    static class Cell {
         int row;
         int col;
 
@@ -37,27 +40,27 @@ public class DemoBFSTree {
 
         ));
 
-        fill(rows,2,4,'A');
-        System.out.println("----------------------------------------");
+        fill(rows, 2, 4, 'A');
         printRows(rows);
 
     }
+
     private static void printRows(List<StringBuilder> rows) {
         for (StringBuilder row : rows) {
             System.out.println(row.toString());
         }
     }
 
-    private static void fill(List<StringBuilder> matrix, int startRow,int startCol, char fillChar ){
+    private static void fill(List<StringBuilder> matrix, int startRow, int startCol, char fillChar) {
         char oldChar = matrix.get(startRow).charAt(startCol);
-        Queue<DemoDFSTree.Cell> nextToFill = new LinkedList<>();
-        nextToFill.offer(new DemoDFSTree.Cell(startRow,startCol));
+        Stack<Cell> nextToFill = new Stack<>();
+        nextToFill.push(new Cell(startRow, startCol));
 
-        while (!nextToFill.isEmpty()){
-            DemoDFSTree.Cell currentToFill = nextToFill.poll();
+        while (!nextToFill.isEmpty()) {
+            Cell currentToFill = nextToFill.pop();
             int row = currentToFill.getRow();
             int col = currentToFill.getCol();
-            matrix.get(currentToFill.row).setCharAt(currentToFill.col,fillChar);
+            matrix.get(currentToFill.row).setCharAt(currentToFill.col, fillChar);
 
             try {
                 Thread.sleep(2000);
@@ -65,23 +68,24 @@ public class DemoBFSTree {
                 throw new RuntimeException(e);
             }
 
-            if (matrix.get(row).charAt(col - 1) == oldChar){
-                nextToFill.offer(new DemoDFSTree.Cell(row,col - 1));
+
+            if (matrix.get(row).charAt(col - 1) == oldChar) {
+                nextToFill.push(new Cell(row, col - 1));
                 //fill(matrix, row, col - 1, fillChar);
             }
 
-            if (matrix.get(row).charAt(col + 1) == oldChar){
-                nextToFill.offer(new DemoDFSTree.Cell(row,col + 1));
+            if (matrix.get(row).charAt(col + 1) == oldChar) {
+                nextToFill.push(new Cell(row, col + 1));
                 //fill(matrix, row, col + 1, fillChar);
             }
 
-            if (matrix.get(row - 1).charAt(col) == oldChar){
-                nextToFill.offer(new DemoDFSTree.Cell(row - 1,col));
+            if (matrix.get(row - 1).charAt(col) == oldChar) {
+                nextToFill.push(new Cell(row - 1, col));
                 //fill(matrix, row - 1, col, fillChar);
             }
 
-            if (matrix.get(row + 1).charAt(col) == oldChar){
-                nextToFill.offer(new DemoDFSTree.Cell(row + 1,col));
+            if (matrix.get(row + 1).charAt(col) == oldChar) {
+                nextToFill.push(new Cell(row + 1, col));
                 //fill(matrix, row + 1, col, fillChar);
             }
 
@@ -90,4 +94,6 @@ public class DemoBFSTree {
             System.out.println();
         }
     }
+
+
 }

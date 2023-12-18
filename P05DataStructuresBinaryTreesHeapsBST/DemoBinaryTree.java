@@ -1,7 +1,7 @@
 package P05DataStructuresBinaryTreesHeapsBST;
 
 public class DemoBinaryTree {
-    
+
     static class BinaryTree<K> {
 
         //---------------------------------------------------------------------------------------

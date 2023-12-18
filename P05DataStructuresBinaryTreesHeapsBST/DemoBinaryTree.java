@@ -1,10 +1,8 @@
 package P05DataStructuresBinaryTreesHeapsBST;
 
 public class DemoBinaryTree {
-
-
+    
     static class BinaryTree<K> {
-
 
         //---------------------------------------------------------------------------------------
         static class Node<K> {
@@ -75,7 +73,6 @@ public class DemoBinaryTree {
 //            System.out.println(node.getKey());
         }
 
-
         public BinaryTree<K> copy(){
             return new BinaryTree<>(copy(this.root));
         }
@@ -85,16 +82,15 @@ public class DemoBinaryTree {
             }
 
             //Todo: First way copy
-//          return  new Node<K>(node.getKey(),
-//                  copy(node.getLeft()),
-//                  copy(node.getRight()));
-
-            //Todo: Second way copy
             Node<K> copiedNode = new Node<K>(node.key,null,null);
             copiedNode.left = copy(node.getLeft());
             copiedNode.right = copy(node.getRight());
-        }
 
+            //Todo: Second way copy
+          return  new Node<K>(node.getKey(),
+                  copy(node.getLeft()),
+                  copy(node.getRight()));
+        }
     }
 
     public static void main(String[] args) {
@@ -116,8 +112,6 @@ public class DemoBinaryTree {
         BinaryTree<Integer> tree1 = new BinaryTree<>(root);
 
         tree1.print();
-
-
 
         BinaryTree<Integer> copiedTree = tree1.copy();
     }
